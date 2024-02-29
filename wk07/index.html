@@ -10,23 +10,94 @@
 <pre>
 <h2>06.01 Evaluating Digital Forensics Tool Needs</h2>
     <h3>06.01a Types of Digital Forensics Tools</h3>
+    <b>Hardware Forensics Tools</b>
+    <b>Software Forensics Tools</b>
     <h3>06.01b Tasks Performed by Digital Forensics Tools</h3>
+    <b>Computer Forensics Tool Testing (CFTT)</b>
+    <b>ISO 27037</b>
+    <b>DEFRs (Digital Evidence First Responsders)</b>
+    <ul>Guidelines for Evaluating Digital Forensics tools:
+        <li>Acquisistion</li>
+        <li>Validation and Verification</li>
+        <li>Extraction</li>
+        <li>Reconstruction</li>
+        <li>Reporting</li>
+    </ul>
+    <b>Acquisition</b>
+        <ul>Subfunctions of Acquisition:
+            <li>Physical Data copy</li>
+            <li>Logical Data copy</li>
+            <li>Data acquisition format</li>
+            <li>Command-line acquisition</li>
+            <li>GUI acquisition</li>
+            <li>Remote, live, and memory acquisitions</li>
+        </ul>
+    <b>Validation and Verification</b>
+        <b>Validation</b>
+        <b>Verification</b>
+        <b>National Software Reference Library (NSRL)</b>
+    <b>Extraction</b>
+        <ul>Subfunctions of Extraction:
+            <li>Data viewing</li>
+            <li>Keyword search</li>
+            <li>Decompressing or uncompressing</li>
+            <li>Carving / Salvaging</li>
+            <li>Decrypting</li>
+            <li>Bookmarking or tagging</li>
+        </ul>
+        <b>Password Dictionary Attack</b>
+        <b>Brute-force attack</b>
+    <b>Reconstruction</b>
+        <ul>Methods of Reconstruction:
+            <li>Disk-to-disk copy</li>
+            <li>Partition-to-disk copy</li>
+            <li>Image-to-disk copy</li>
+            <li>Image-to-partition copy</li>
+            <li>Disk-to-image copy</li>
+            <li>Rebuilding files from data runs and carving</li>
+        </ul>
+    <b>Reporting</b>
+        <ul>Subfunctions of Reporting:
+            <li>Bookmarking / Tagging</li>
+            <li>Log reports</li>
+            <li>Timelines</li>
+            <li>Report generator</li>
+        </ul>
     <h3>06.01c Tool Comparisons</h3>
     <h3>06.01c Other Considerations for Tools</h3>
     
 <h2>06.02 Digital Forensics Software Tools</h2>
     <h3>06.02a Command-Line Forensics Tools</h3>
     <h3>06.02b Linux Forensics Tools</h3>
+    <b>SMART</b>
+    <b>Helix 3</b>
+    <b>Kali Linux</b>
+    <b>Autopsy and Sleuth Kit</b>
+    <b>Forcepoint Threat Protection</b>
     <h3>06.02c Other GUI Forensics Tools</h3>
     
 <h2>06.03 Digital Forensics Hardware Tools</h2>
     <h3>06.03a Forensic Workstations</h3>
+        <ul>3 Catagories of Forensic Workstations:
+            <li>Stationary</li>
+            <li>Portable</li>
+            <li>Lightweight</li>
+        </ul>
+    <b>Building Your Own Workstation</b>    
     <h3>06.03b Using a Write-Blocker</h3>
+    <b>Write-blocker</b>
     <h3>06.03c Recommendations for a Forensic Workstation</h3>
     
 <h2>06.04 Validating and Testing Forensics Software</h2>
     <h3>06.04a Using National Institute of Standards and Technology Tools</h3>
     <h3>06.04b Using Validation Protocols</h3>
+    <b>Digital Forensics Examination Protocol</b>
+        <ol>
+            <li>First, conduct your investigation of the digital evidence with one GUI tool</li>
+            <li>Then perform the same investigation with a disk editor to verify that the GUI tool is seeing the same digital evidence in the same places on the test / suspect drive's image.</li>
+            <li>If a file is recovered, obtain the hash value with the GUI tool and the disk editor, and then compare the results to verify whether the file has the same value in both tools.</li>
+        </ol>
+    <b>Digital Forensics Tool Upgrade Protocol</b>
     
 <h2>06.05 Chapter Review</h2>
     <h3>06.05a Chapter Summary</h3>
