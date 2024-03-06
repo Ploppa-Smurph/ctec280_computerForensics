@@ -21,6 +21,20 @@
   
 <h2>07.04 Chapter Review</h2>
     <h3>07.04a Chapter Summary</h3>
+    <ul>
+        <li>UNIX was created to be a multiuser, multithreaded, secure OS. The Open Group was formed as a neutral standards consortium that determines and certifies when an OS meets UNIX requirements.</li>
+        <li>The Linux kernel is usually packaged with other software components, such as a GUI and applications. The most widely used distributions include Ubuntu, Mint, Fedora, CentOS, and Gentoo.</li>
+        <li>Linux supports a wide range of file systems. The most recent, Ext4, added support for partitions larger than 16 TB, improved management of large files, and offered a more flexible approach to adding file system features.</li>
+        <li>UNIX and Linux have four components defining the file system: boot block, superblock, inode block, and data block. In addition, an inode is assigned to each file allocation unit that contains file and directory metadata (except the filename and path) and provides a mechanism for linking data stored in data blocks.</li>
+        <li>In the Linux file system, a hard link is a pointer that allows accessing the same file by different filenames, which refer to the same inode and physical location on the drive. Symbolic links are pointers to other files; they can point to items on other drives or other parts of the network and don’t affect the link count.</li>
+        <li>Before macOS, the file systems HFS and HFS+ were used. The main difference is that HFS+ raised the number of blocks to more than 4 billion. Consequently, HFS+ supports smaller file sizes on larger volumes, resulting in more efficient disk use. With the advent of macOS High Sierra, the Apple File System was introduced and provides better security, encryption, and performance speeds.</li>
+        <li>In older versions of macOS, a file consists of two parts: a data fork, where data is stored, and a resource fork, where file metadata and application information are stored.</li>
+        <li>A volume is any storage medium used to store files. Volumes have allocation blocks and logical blocks. When you save a file, it’s assigned to an allocation block, which is a group of consecutive logical blocks. macOS reduces file fragmentation by using clumps, which are groups of contiguous allocation blocks.</li>
+        <li>Plist files, which are preference files for installed applications on a system running macOS, can be useful sources of information for a forensics investigation.</li>
+        <li>In macOS, unified logging has been added for recording log files and includes new utilities to help forensics examiners.</li>
+        <li>The biggest challenge in acquiring images from macOS systems is often physical access to the drive. With many macOS devices, special tools and training from Apple are needed.</li>
+        <li>Linux forensics tools are often freeware, so forensics investigators can use them to help keep costs down. Tools such as Autopsy are commonly used.</li>
+    </ul>
     <h3>07.04b Key Terms</h3>
     <h3>07.04c Review Questions</h3>
     <b>01) </b>
