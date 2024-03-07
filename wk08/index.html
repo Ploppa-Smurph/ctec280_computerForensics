@@ -10,12 +10,69 @@
 <h1>CTEC 280 Computer Forensics wk08 Mod 07: Linux and Macintosh File Systems</h1>
 <h2>07.01 Examining Linux File Structures</h2>
     <h3>07.01a File Structures in Ext4</h3>
-    
+    <b>Ext2 (Second Extended File System)</b>
+    <b>Ext3 (Third Extended File System)</b>
+    <b>Ext4 (Fourth Extended File System)</b> - supports partitions over 16TB
+    <b>Boot Block</b> - contains 'bootstrap code'; the instructions for system startup
+    <b>Super Block</b> - contains info about the system, considered 'metadata'
+    <b>Inode Block</b> - 1st data after the superblock, assigned to every File Allocation Unit
+    <b>Data Block</b> - where directories and files are stored on the disk
+    <b>Inodes</b> - contain file and directory metadata
+        <ul>Inodes contain the following information: 
+            <li>Mode and type fo the file or directory</li>
+            <li>Number of links to a file or directory</li>
+            <li>UID and GID of the file's / directory's owner</li>
+            <li>Number of bytes in the file or directory</li>
+            <li>File's / directory's last access time and last modified time</li>
+            <li>Inode's last file status change time</li>
+            <li>Block address for the file data</li>
+            <li>Indirect, double-indirect, and triple-indirect block addresses for the file data</li>
+            <li>Current usage status of the inode</li>
+            <li>Number of actual blocks assigned to a file</li>
+            <li>File generation number and version number</li>
+            <li>Continuation inode's link</li>
+        </ul>
+    <b>Indirect Pointers</b> - the 1st 10 pointers
+    <b>Double-indirect Pointers</b> - pointers in the 2nd layer??
+    <b>Triple-indirect Pointers</b> - pointers in the last (3rd) layer
+    <b>Bad Block Inode</b> - list of the bad sectors in a linux system
+    <b>Hard Links</b> - pointer that allows accessing a file by a different filename
+        <i>use the <b>'ln'</b> command in linux to create a hardlink</i>
+    <b>Link Count</b> - specifies the number of hard links
+        <i>use the <b>'ls -ia'</b> command to list files and their hard link quantity</i>
+    <b>Symbolic Links</b> - pointers to other files, not included in link count
+        <i>use the <b>'ln -s'</b> command in linux to create a symbolic link</i>
+
 <h2>07.02 Understanding Macintosh File Structures</h2>
+<b>HFS (Hierarchical File System)</b>
+<b>HFS+ (Extended Format File System)</b>
+<b>APFS (Apple File System)</b> - also writes metadata to help with crash protection
     <h3>07.02a An Overview of Mac File Structures</h3>
+    <b>Data Fork</b> - 
+    <b>Resource Fork</b> - 
+    <b>Logical Block</b> - 
+    <b>Allocation Block</b> - 
+    <b>Logical EOF</b> - 
+    <b>Physical EOF</b> - 
+    <b>Clumps</b> - 
+    <b>Master Directory Block (MDB)</b> - 
+    <b>Volume Control Block (VCB)</b> - 
+    <b>Extents Overflow File</b> - 
+    <b>Catalog</b> - listing of all files and directories on the volume
+    <b>B*-tree</b> - early Mac, contains these 3 nodes:
+        <b><i>Header Node</i></b> - stores information about the file 
+        <b><i>Index Node</i></b> - stores link information to previous and next nodes
+        <b><i>Map Node</i></b> - stores node descriptor and map record
     <h3>07.02b Forensics Procedures in Mac</h3>
-            
+    <b>Plist files</b> - preference files for installed apps
+    <b>Unified Logging</b> -
+    <b>keychains</b> - 
+    <b>Acquisition Methods in MacOS</b>
+
 <h2>07.03 Using Linux Forensics Tools</h2>
+<b>Tarball</b>
+<b>Sleuth Kit (previously TASK)</b>
+<b>Foremost</b> - carving tool
     <h3>07.03a Installing Sleuth Kith and Autopsy</h3>
     <h3>07.03b Examining a Case with Sleuth Kit and Autopsy</h3>
   
