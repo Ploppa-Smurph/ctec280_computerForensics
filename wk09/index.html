@@ -34,8 +34,107 @@
     
 <h2>08.05 </h2>
     <h3>08.05a Chapter Summary</h3>
+    <ul>
+    <li>A graphics file contains an image, such as a digital photo, line art, a three-dimensional image, or a scanned replica of a printed picture. A graphics program creates and saves one of three types of graphics files: bitmap, vector, and metafile. Bitmap images are collections of dots, or pixels, that form an image. Vector graphics are mathematical instructions that define lines, curves, text, and geometric shapes. Metafile graphics are combinations of bitmap and vector images.</li>
+    <li>When you use a graphics editor or an image viewer, you can open a file in one of many graphics file formats. Each format has different qualities, including the amount of color and compression it uses. If you open a graphics file in a program that supports multiple file formats, you can save the file in a different file format. However, converting graphics files this way can change image quality.</li>
+    <li>Bitmap images store graphics information as grids of pixels (short for “picture elements”). The quality of a bitmap image displayed onscreen is governed by resolution, which determines the amount of detail displayed. Vector graphics, unlike bitmap and raster files, use lines instead of dots. A vector graphic stores only the calculations for drawing lines and shapes; a graphics program converts these calculations into images. You can enlarge a vector graphic without affecting image quality. Metafile graphics combine bitmap and vector graphics and can have the characteristics of both image types.</li>
+    <li>Most graphics editors enable you to create files in one or more of the standard graphics file formats, such as Graphic Interchange Format (.gif), Joint Photographic Experts Group (.jpeg or .jpg), Windows Bitmap (.bmp), and Tagged Image File Format (.tif or .tiff). Nonstandard graphics file formats include less common formats, such as Targa (.tga) and Raster Transfer Language (.rtl); proprietary formats, such as Photoshop (.psd); newer formats, such as Scalable Vector Graphics (.svg); and old or obsolete formats, such as Paintbrush (.pcx).</li>
+    <li>Most graphics file formats, including GIF and JPEG, compress data to save disk space and reduce transmission time. Other formats, such as BMP, rarely compress data or do so inefficiently. You can use compression tools to compact data and reduce file size. Lossless compression saves file space by using mathematical formulas to represent data in a file. Lossy compression compresses data by permanently discarding bits of information in the file.</li>
+    <li>Photos taken with digital cameras, smartphones, and other digital devices are typically in raw and Exif JPEG formats. The raw format is the proprietary format of a device’s manufacturer. The Exif format is different from the standard JFIF JPEG format because it contains metadata about the device and picture, such as shutter speed and date and time a picture was taken.</li>
+    <li>In a digital forensics investigation involving graphics files, you need to locate and recover all graphics files on a drive and determine which ones are pertinent to your case. Because these files aren’t always stored in standard graphics file formats, you should examine all files your forensics tools find, even if they aren’t identified as graphics files. A graphics file contains a header with instructions for displaying the image. Each type of graphics file has its own header that helps you identify the file format. Because the header is complex and difficult to remember, you can compare a known good file header with that of a suspect file.</li>
+    <li>When you’re examining recovered data remnants from files in slack or free space, you might find data that appears to be a header for a common graphics file type. If you locate header data that’s partially overwritten, you must reconstruct the header to make it readable again by comparing the hexadecimal values of known graphics file formats to the pattern of the file header you found. After you identify fragmented data, you can use a forensics tool to recover the fragmented file.</li>
+    <li>If you can’t open a graphics file in an image viewer, the next step is to examine the file header to see whether it matches the header in a known good file. If the header doesn’t match, you must insert the correct hexadecimal values manually with a hex editor.</li>
+    <li>The Internet is the best source for learning more about file formats and their extensions. You can search for “file type” or “file format” and find a list of Web sites with information on file extensions.</li>
+    <li>You should analyze graphics file headers when you find new or unique file types that digital forensics tools don’t recognize. The simplest way to do this is with a hex editor. You can record the hexadecimal values in the header for future reference.</li>
+    <li>Many viewer utilities are freeware or shareware and enable you to view a wide range of graphics file formats. Most GUI forensics tools include image viewers that display common image formats, especially GIF and JPEG.</li>
+    <li>Steganography is a method of hiding data by using a host file to cover the contents of a secret message. The two major techniques are insertion and substitution. Insertion places data from the secret file into the host file. When you view the host file in its associated program, the inserted data is hidden unless you analyze the data structure. Substitution replaces bits of the host file with other bits of data.</li>
+    <li>Steganalysis tools can detect hidden data in graphics files, even in files that have been renamed to protect their contents. If the file has been renamed, steganalysis tools can use the file header to identify the file format and indicate whether the file contains an image. Steganalysis tools can also detect variations in a graphics file.</li>
+    <li>Copyright law in the United States protects literary works, musical works, motion pictures, sound recordings and graphics. On the Internet, however, artists should take additional precautions. There’s no “international” copyright law, so laws vary from country to country. There are, however, treaties and conventions that protect works on an international scale.</li>
+    <li>Fair use allows using copyrighted material for noncommercial or educational purposes without having to compensate the material’s originator or owner.</li>
+    </ul>
     <h3>08.05b Key Terms</h3>
+    <b>Bitmap Images</b>
+    <b>Carving</b>
+    <b>Data Compression</b>
+    <b>Demosaicing</b>
+    <b>Exchangeable Image File (Exif)</b>
+    <b>Fair Use</b>
+    <b>False Positives</b>
+    <b>Least Significant Bit (LSB)</b>
+    <b>Lossless Compression</b>
+    <b>Lossy Compression</b>
+    <b>Metafile Graphics</b>
+    <b>Most Significant Bit (MSB)</b>
+    <b>Nonstandard Graphics File Formats</b>
+    <b>Pixels</b>
+    <b>Raster Images</b>
+    <b>Raw File Format</b>
+    <b>Resolution</b>
+    <b>Salvaging</b>
+    <b>Standard Graphics File Formats</b>
+    <b>Vector Graphics</b>
+    <b>Vector Quantization (VQ)</b>
     <h3>08.05c Review Questions</h3>
+    <b>01) </b>
+        <i></i>
+
+    <b>02) </b>
+        <i></i>
+
+    <b>03) </b>
+        <i></i>
+
+    <b>04) </b>
+        <i></i>
+
+    <b>05) </b>
+        <i></i>
+
+    <b>06) </b>
+        <i></i>
+
+    <b>07) </b>
+        <i></i>
+
+    <b>08) </b>
+        <i></i>
+
+    <b>09) </b>
+        <i></i>
+
+    <b>10) </b>
+        <i></i>
+
+    <b>11) </b>
+        <i></i>
+
+    <b>12) </b>
+        <i></i>
+
+    <b>13) </b>
+        <i></i>
+
+    <b>14) </b>
+        <i></i>
+
+    <b>15) </b>
+        <i></i>
+
+    <b>16) </b>
+        <i></i>
+
+    <b>17) </b>
+        <i></i>
+
+    <b>18) </b>
+        <i></i>
+
+    <b>19) </b>
+        <i></i>
+
+    <b>20) </b>
+        <i></i>
+        
     <h3>08.05d Hands-On Projects</h3>
 </pre>        
 </body>
