@@ -9,12 +9,19 @@
 <pre>
 <h1>CTEC 280 Computer Forensics wk10 Module 09: Digital Forensics and Validation</h1>
 <h2>09.01 Determining What Data to Collect and Analyze</h2>
+<b>Scope Creep</b>
     <h3>09.01a Approaching Digital Forensics Cases</h3>
+    <b>Refining and Modifying the Investigation Plan</b>
     <h3>09.01b Using Autopsy to Validate Data</h3>
+    <b>NSRL (National Software Reference Library)</b>
+    <b>Installing NSRL Hashes in Autopsy</b>
     <h3>09.01c Collecting Hash Values in Autopsy</h3>
             
 <h2>09.02 Validating Forensic Data</h2>
     <h3>09.02a Validating with Hexadecimal Editors</h3>
+    <b>Block-wise Hashing</b>
+    <b>Using Hash Values to Discriminate Data</b>
+        <b>Known File Filter (KFF)</b>
     <h3>09.02b Validating with Digital Forensics Tools</h3>
             
 <h2>09.03 Addressing Data-Hiding Techniques</h2>
@@ -22,13 +29,33 @@
     <h3>09.03b Hiding Partitions</h3>
     <h3>09.03c Marking Bad Clusters</h3>
     <h3>09.03d Bit-Shifting</h3>
+    <b>Assembler Program / aka 'macro'</b>
+    <b>Bit-shifting</b>
     <h3>09.03e Understanding Steganalysis Methods</h3>
+    <b>Steganography</b> - hidden writing
+        <b>Stego-only Attack</b> - 
+        <b>Known Cover Attack</b> - 
+        <b>Known Message Attack</b> - 
+        <b>Chosen Stego Attack</b> - 
+        <b>Chosen Message Attack</b> - 
     <h3>09.03f Examining Encrypted Files</h3>
+    <b>Key Escrow</b>
     <h3>09.03g Recovering Passwords</h3>
+    <b>Brute Force / Dictionary Attack</b>
+    <b>Hybrid Attack</b>
+    <b>Rainbow Table</b>
+    <b>Salting Passwords</b>
             
 <h2>09.04 Chapter Review</h2>
     <h3>09.04a Chapter Summary</h3>
+    - Examining and analyzing digital evidence depend on the nature of the investigation and the amount of data to process. You begin a forensics case by creating an investigation plan that defines the investigation’s goal and scope, the materials needed, and the tasks to perform. Depending on the evidence you find, you might have to modify your investigation plan at some point.
+    - For most forensics investigations, you follow the same general procedures: Wipe and prepare target drives, document all hardware components on the suspect’s computer, check date and time values in the suspect computer’s CMOS, acquire data and document your steps, list all folders and files on the suspect system and examine their contents, attempt to open any password-protected files, determine the function of executable files, and document all your steps, making sure to follow evidence preservation procedures.
+    - Advanced digital forensics tools have features such as indexing text data that make keyword searches much faster. They also allow integrating the NIST National Software Resource Library (NSRL) to get MD5 and SHA-1 hash values for known OSs and applications.
+    - One of the most critical aspects of digital forensics is validating digital evidence because ensuring the integrity of data you collect is essential for presenting evidence in court. Forensics tools have built-in validation features, but hexadecimal editors offer more advanced features. All data needs to be validated before and during analysis because digital evidence can be corrupted easily. Use hash values such as MD5 and SHA-1 to verify that data hasn’t changed.
+    - Data hiding involves changing or manipulating a file to conceal information. Data-hiding techniques include changing file extensions, setting file attributes to hidden, hiding partitions, bit-shifting, using steganography, and using encryption and password protection.
+    - There are three ways to recover passwords: dictionary attacks, brute-force attacks, and rainbow tables. Rainbow tables are the quickest method because they contain predefined hash values of all known passwords. If passwords have been salted, however, recovering them can take much longer, and some might not be recoverable at all.
     <h3>09.04b Key Terms</h3>
+    
     <h3>09.04c Review Questions</h3>
     <b>01) </b>
        <i></i>
