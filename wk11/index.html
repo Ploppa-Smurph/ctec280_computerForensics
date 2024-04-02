@@ -9,23 +9,110 @@
 <pre>
 <h1>CTEC 280 Computer Forensics wk11 Module 10: Virtual Machine Forensics, Live Acquisitions, and Network Forensics</h1>
 <h2>10.01 An Overview of Virtual Machine Forensics</h2>
+<b>Type 1 Hypervisor</b> - bare metal, loads on hardware
+<b>Type 2 Hypervisor</b> - runs on top of OS
+<b></b>
     <h3>10.01a Type 2 Hypervisors</h3>
+        <b>Virtualization Technology (VT)</b>
+        <b>Virtual Machine Extension (VMX)</b>
+        <b>Parallels Desktop</b>
+        <b>KVM (Kernel-based Virtual Machine)</b>
+        <b>Microsoft Hyper-V</b>
+        <b>VMware Workstation and Workstation Player</b>
+        <b>Virtual Box</b>
     <h3>10.01b Conducting an Investigation with Type 2 Hypervisors</h3>
+        ipconfig (windows) / ifconfig (linux)
+        get-vmnetworkadapter (powershell)
+        <b>Other VM Examination Methods</b>
+            <b><i>FTK Imager</i></b>
+            <b><i>Magnet AXIOM</i></b>
+            <b><i>OS Forensics</i></b>
+        <b>Using VMs as Forensics Tools</b>
+            <b>SANS Investigative Forensics Toolkit (SIFT)</b>
     <h3>10.01c Working with Type 1 Hypervisors</h3>
-            
+        - VMware vSphere (Standard, Enterprise Plus, and Operations Management Enterprise Plus)
+        - Microsoft Hyper-V Server 2016
+        - XenProject XenServer (has both free and commercial data center versions)
+        - IBM PowerVM
+        - Parallels
+        - Citrix XenServer
+        - VMware ESXi
 <h2>10.02 Performing Live Acquisitions</h2>
+<b>OOV (Order of Volatility)</b> - how long a piece of information lasts on a system
     <h3>10.02a Performing a Live Acquisition in Windows</h3>
+        <b>Mandiant Memoryze</b> - lists all open network sockets (including those hidden by rootkits)
+        <b>Belkasoft RamCapturer</b>
+        <b>Kali Linux</b> - updated version of BackTrack??
     
 <h2>10.03 Network Forensics Overview</h2>
+<b>Network Forensics</b> - process of collecting and analyzing raw network data and tracking network traffic
     <h3>10.03a The Need for Established Procedures</h3>
     <h3>10.03b Securing a Network</h3>
+        <b>Layered Network Defense Strategy</b>
+        <b>DiD (Defense in Depth)</b>
+            - People
+            - Technology
+            - Operations
+        <b>IDSs (Intrusion Detection Systems)</b>
     <h3>10.03c Developing Procedures for Network Forensics</h3>
+        <b>01) Always use standard installation image. NOT a bit-stream image. Should have MD5 and SHA-1 hash values</b>
+        <b>02) When intrusion happens, make sure the vulnerability has been fixed to prevent other attacks from taking advantage of the opening</b>
+        <b>03) Attempt to retrieve all volatile data, such as RAM and running processes, by doing a live acquisition before turning off the system</b>
+        <b>04) Acquire the compromised drive and make a forensic image of it</b>
+        <b>05) Compare files on the forensic image with the original installation image. Compare hash values of common files, such as Win.exe and standard dynamic link libraries (DLL) and ascertain whether they have changed</b>
+        <b>Reviewing Network Logs</b>
+            <b>tcpdump</b> - used to examine network traffic
+        <b>Using Network Tools</b>
+            - Splunk
+            - Spiceworks
+            - Nagios
+            - Cacti
+        <b>Using Packet Analyzers</b>
+            <b>Packet Analyzers</b>
+            <b>pcap (packet capture)</b> 'libpcap' = Linux; 'winpcap' = Windows
+            <b>tethereal</b> - network protocol analyzer
+            <b>tcpslice</b> - extract information from large Libpcap files
+            <b>tcpreplay</b> - used to replay network traffic captured from libpcap format
+            <b>Etherape</b> - tool for viewing network traffic graphically
+            <b>Netdude</b> - another GUI tool designed to inspect and analyze large tcpdump files
+            <b>Argus</b> - session data probe, collector, and analysis tool
+            <b>Wireshark</b>
     <h3>10.03d Investigating Virtual Networks</h3>
+        <b>Cloud Service Provider (CSP)</b>
     <h3>10.03e Examining the Honeynet Project</h3>
-            
+        <b>Honeynet Project</b>    
+        <b>DDoS (Distributed Denial-of-Service)</b>
+        <b>zombies</b>
+        <b>zero-day attacks</b>
+        <b>Honeypot</b>
+        <b>Honeywalls</b>
 <h2>10.04 Chapter Review</h2>
     <h3>10.04a Chapter Summary</h3>
+    - Virtual machines are used extensively in organizations and are a common part of forensic investigations. Investigators must be familiar with file extensions that indicate the existence of VMs.
+    - There are two types of hypervisors for running virtual machines. Type 1 hypervisors contain their own OSs and are loaded directly on physical hardware. Type 2 hypervisors are applications installed on top of an OS.
+    - Virtualization Technology is Intel’s CPU design for security and performance enhancements that enable the BIOS to support virtualization. Virtual Machine Extensions (VMX) are instruction sets created for Intel processors to handle virtualization. Intel now has virtualization technology for memory, I/O, graphics, and security.
+    - Forensic procedures for VMs start by creating an image of the host machine, and then exporting files associated with a VM. Next, you create an image of the VM. Virtual machines can be imaged by using forensics software tools, mounting the VM as a drive, or doing a live acquisition.
+    - Live acquisitions are necessary to retrieve volatile items, such as RAM and running processes. They’re also useful when taking systems offline would affect business functioning adversely. Investigators must be concerned with the order of volatility (OOV), which determines how long a piece of information lasts on a system.
+    - Network forensics is the process of collecting and analyzing raw network data and systematically tracking network traffic to ascertain how an attack took place. Organizations should develop standard procedures for network forensics.
+    - Steps must be taken to harden networks before a security breach happens, which includes applying layered defense strategies to the network architecture, installing the latest software patches, and making employees aware of security procedures.
+    - Being able to spot variations in network traffic can help you track intrusions, so knowing a network’s typical traffic patterns is important.
+    - Several tools are available for monitoring network traffic, such as packet analyzers and honeypots. Tools such as tcpdump and Wireshark offer support groups and online training. Keep in mind that network tools can also be used by intruders who obtain administrative rights to attack networks from the inside.
+    - The Honeynet Project is designed to help people learn the latest intrusion techniques that attackers are using. The project disseminates information and provides tools for research.
     <h3>10.04b Key Terms</h3>
+        <b>defense in depth (DiD)</b>
+        <b>distributed denial-of-service (DDoS)</b>
+        <b>honeypot</b>
+        <b>honeywalls</b>
+        <b>layered network defense strategy</b>
+        <b>network forensics</b>
+        <b>order of volatility (OOV)</b>
+        <b>packet analyzers</b>
+        <b>type 1 hypervisor</b>
+        <b>type 2 hypervisor</b>
+        <b>Virtualization Technology (VT)</b>
+        <b>Virtual Machine Extensions (VMX)</b>
+        <b>zero day attacks</b>
+        <b>zombies</b>
     <h3>10.04c Review Questions</h3>            
 
 </pre>   
