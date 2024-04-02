@@ -158,6 +158,17 @@
 
     <b>14) Tcpslice can be used to retrieve specific timeframes of packet captures.</b>
         <i>True</i>
+    <h3>Lab 10 Virtual Machine Notes</h3>
+        - Virtual machines are used extensively in organizations and are a common part of forensic investigations. Investigators must be familiar with file extensions that indicate the existence of VMs.
+        - There are two types of hypervisors for running virtual machines. Type 1 hypervisors contain their own OSs and are loaded directly on physical hardware. Type 2 hypervisors are applications installed on top of an OS.
+        - Virtualization Technology is Intel’s CPU design for security and performance enhancements that enable the BIOS to support virtualization. Virtual Machine Extensions (VMX) are instruction sets created for Intel processors to handle virtualization.
+        - Forensic procedures for VMs start by creating an image of the host machine, and then exporting files associated with a VM. Next, you create an image of the VM. Virtual machines can be imaged by using forensics software tools, mounting the VM as a drive, or doing a live acquisition.
+        - Live acquisitions are necessary to retrieve volatile items, such as RAM and running processes. They’re also useful when taking systems offline would affect business functioning adversely. Investigators must be concerned with the order of volatility (OOV), which determines how long a piece of information lasts on a system.
+        - Network forensics is the process of collecting and analyzing raw network data and systematically tracking network traffic to ascertain how an attack took place. Organizations should develop standard procedures for network forensics.
+        - Steps must be taken to harden networks before a security breach happens, which includes applying layered defense strategies to the network architecture, installing the latest software patches, and making employees aware of security procedures.
+        - Being able to spot variations in network traffic can help you track intrusions, so knowing a network’s typical traffic patterns is important.
+        - Several tools are available for monitoring network traffic, such as packet analyzers and honeypots. Tools such as tcpdump and Wireshark offer support groups and online training. Keep in mind that network tools can also be used by intruders who obtain administrative rights to attack networks from the inside.
+        - The Honeynet Project is designed to help people learn the latest intrusion techniques that attackers are using. The project disseminates information and provides tools for research.
 
 </pre>   
 </body>
