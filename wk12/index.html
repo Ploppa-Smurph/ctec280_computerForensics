@@ -9,30 +9,157 @@
 <h1>CTEC 280 Computer Forensics Module 11: E-mail and Social Media Investigations; Module 12: Mobile Device Forensics and the Internet of Anything</h1>
 <pre>
 <h2>11.01 Exploring the Role of E-mail in Investigations</h2>
+<b>Phishing</b>
+<b>Pharming</b>
+<b>Spoofing</b>
+<b>Enhanced / Extended Simple Mail Transfer Protocol (ESMTP)</b>
 <h2>11.02 Exploring the Roles of the Client and Server in E-mail</h2>
+    <b>Client / Server Architecture</b>
 <h2>11.03 Investigating E-mail Crimes and Violations</h2>
-    <h3>11.03a</h3>
-    <h3>11.03b</h3>
-    <h3>11.03c</h3>
-    <h3>11.03d</h3>
-    <h3>11.03e</h3>
-    <h3>11.03f</h3>
-    <h3>11.03g</h3>
-<h2>11.04 </h2>
-    <h3>11.04a</h3>
-    <h3>11.04b</h3>
-<h2>11.05 </h2>
-    <h3>11.05a</h3>
-    <h3>11.05b</h3>
-    <h3>11.05c</h3>
-    <h3>11.05d</h3>
-<h2>11.06 </h2>
-    <h3>11.06a</h3>
+<b>Electronic Communications Privacy Act (ECPA)</b>
+<b>Stored Communications Act (SCA)</b>
+    <h3>11.03a Understanding Forensic Linguistics</h3>
+    <h3>11.03b Examining E-mail Messages</h3>
+        <b>Copying an E-mail Message</b>
+    <h3>11.03c Viewing E-mail Headers</h3>
+    <h3>11.03d Examining E-mail Headers</h3>
+        <b>DKIM (Domain Key Identified Mail)</b>
+    <h3>11.03e Examining Additional E-mail Files</h3>
+        <i>Pagefile.sys</i>
+    <h3>11.03f Tracing an E-mail Message</h3>
+        <b>Tracing</b> - determining message origin
+    <h3>11.03g Using Network E-mail Logs</h3>
+        <b>Firewall Logs</b>
+<h2>11.04 Understanding E-mail Servers</h2>
+    <h3>11.04a Examining UNIX E-mail Server Logs</h3>
+        <b>Simple Mail Transfer Protocol (SMTP)</b> - <i>/var/log/maillog</i>
+        <b>Post Office Protocol ver. 3 (POP3)</b>
+        <b>Internet Message Access Protocol 4(IMAP4)</b>
+    <h3>11.04b Examining Microsoft E-mail Server Logs</h3>
+        <b>Messaging Application Programming Interface (MAPI)</b>     
+<h2>11.05 Using Specialized E-mail Forinsics Tools</h2>
+<b>DataNumen</b> - for Outlook and Express
+<b>FINALeMAIL</b> - for Outlook Express and Eudora
+<b>Sawmill-Novell GroupWise</b> - for log analysis
+    <h3>11.05a Using Magnet AXIOM to Recover E-mail</h3>
+    <h3>11.05b Using a Hex Editor to Carve E-mail Messages</h3>
+        <b>mbox</b>
+        <b>Multipurpose Internet Mail Extensions (MIME)</b>
+    <h3>11.05c Recovering Outlook Files</h3>
+        <i>scanpst.exe</i> - recovery tool in Microsoft Office that can repair <i>.ost</i> & <i>.pst</i> files.
+    <h3>11.05d E-mail Case Studies</h3>
+        M57 and Enron cases
+<h2>11.06 Applying Digital Forensics Methods to Social Media Communications</h2>
+<b>Online Social Networks (OSNs)</b>
+<b>Social Media Forensics on Mobile Devices</b>
+    <h3>11.06a Forensics Tools for Social Media Investigations</h3>
 <h2>11.07 </h2>
-    <h3>11.07a</h3>
-    <h3>11.07b</h3>
-    <h3>11.07c</h3>
-    
+    <h3>11.07a Chapter Summary</h3>
+    - E-mail fraudsters use phishing, pharming, and spoofing scam techniques. Phishing e-mails typically lure users to sites or ask for sensitive information. Pharming e-mails redirect users to Web sites that look like legitimate businesses or official government Web sites and solicit personal identity information from victims.
+    - In both Internet and intranet e-mail environments, e-mail messages are distributed from one central server to connected client computers, a configuration called a client/server architecture. The server uses server e-mail software to provide e-mail services. Client computers use e-mail programs (also called e-mail clients) to contact the e-mail server and send and retrieve e-mails.
+    - Investigating crimes or policy violations involving e-mail is similar to investigating other types of computer abuse and crimes. Your goal is to find out who’s behind the crime, collect the evidence, and build a case.
+    - Forensics linguistics is a field where language and the law intersect to determine the author of e-mails, text messages, and other online communications; it encompasses civil cases, criminal cases, cyberterrorism cases, and other legal proceedings. Evidence from forensic linguists is now accepted in many courts worldwide. Forensic linguists can determine, for example, whether a certain person actually wrote an e-mail, where he or she might be from, and in some cases, his or her original language or dialect.
+    - After determining that a crime has been committed involving e-mail, access the victim’s computer, if possible, and then use the installed e-mail program to find the e-mail the victim received. Next, copy and print the e-mail. You might also want to forward the message to another e-mail address, depending on your organization’s guidelines.
+    - Investigators use e-mail headers to trace the route e-mails take through servers. They can also use this information to determine who really sent an e-mail or pinpoint the sender’s location.
+    - To find an e-mail header, investigators generally use the e-mail program that created the message. The header provides supporting evidence and can help track a suspect to an e-mail’s originating location by finding the domain or IP address. Also helpful are the date and time a message was sent, the filenames of any attachments, and the unique ID number, if it’s supplied. With the originating e-mail address, investigators can track a message to a suspect by doing reverse lookups.
+    - To investigate e-mail abuse, you should know how an e-mail server records and handles e-mail. Some e-mail servers use databases that store users’ e-mails; others use a flat file system. E-mail servers also maintain a log (by default or through configuration settings) of all e-mails that are processed.
+    - For many e-mail investigations, you can rely on e-mail files, e-mail headers, and e-mail server log files. However, if the e-mail administrator isn’t willing to turn over records and files, or you encounter a highly customized e-mail environment, you can use data recovery tools and forensics tools designed to recover e-mail files.
+    - For other e-mail applications that use the mbox format, a hexadecimal editor can be used to carve messages manually. This technique requires perseverance because it’s tedious and time consuming.
+    - Social media, or online social networks (OSNs), can provide evidence in criminal and civil cases, so software for collecting OSN information is being developed. Because of the variety and amount of data involved in OSN investigations, techniques of big data analytics are usually needed.
+    - The majority of people engaging in social media communications are mobile users. Almost all mobile devices store data in a SQLite database, but evidence artifacts vary depending on the social media channel and the device.
+    - Social media forensics tools have evolved with the technology, and many forensics suites have built-in social media tools. They’re designed to access Facebook, Twitter, and other OSN user accounts and examine pictures, postings, videos, friend lists, and so forth. These tools can be used to find out which people users have been in touch with, when, and how often.
+    <h3>11.07b Key Terms</h3>
+    <b>client/server architecture
+       Electronic Communications Privacy Act (ECPA)
+       Enhanced/Extended Simple Mail Transfer Protocol (ESMTP)
+       forensic linguistics
+       Internet Message Access Protocol 4 (IMAP4)
+       mbox
+       Messaging Application Programming Interface (MAPI)
+       Multipurpose Internet Mail Extensions (MIME)
+       online social networks (OSNs)
+       pharming
+       phishing
+       Post Office Protocol version 3 (POP3)
+       Simple Mail Transfer Protocol (SMTP)
+       spoofing
+       Stored Communications Act (SCA)</b>
+    <h3>11.07c Review Questions</h3>
+    <b>01) </b>
+        <i></i>
+
+    <b>02) </b>
+        <i></i>
+
+    <b>03) </b>
+        <i></i>
+
+    <b>04) </b>
+        <i></i>
+
+    <b>05) </b>
+        <i></i>
+
+    <b>06) </b>
+        <i></i>
+
+    <b>07) </b>
+        <i></i>
+
+    <b>08) </b>
+        <i></i>
+
+    <b>09) </b>
+        <i></i>
+
+    <b>10) </b>
+        <i></i>
+
+    <b>11) </b>
+        <i></i>
+
+    <b>12) </b>
+        <i></i>
+
+    <b>13) </b>
+        <i></i>
+
+    <b>14) </b>
+        <i></i>
+
+    <b>15) </b>
+        <i></i>
+
+    <b>16) </b>
+        <i></i>
+
+    <b>17) </b>
+        <i></i>
+
+    <b>18) </b>
+        <i></i>
+
+    <b>19) </b>
+        <i></i>
+
+    <b>20) </b>
+        <i></i>
+
+    <b>21) </b>
+        <i></i>
+
+    <b>22) </b>
+        <i></i>
+
+    <b>23) </b>
+        <i></i>
+
+    <b>24) </b>
+        <i></i>
+
+    <b>25) </b>
+        <i></i>
+
 <h2>12.01 </h2>
     <h3>12.01a</h3>
     <h3>12.01b</h3>
