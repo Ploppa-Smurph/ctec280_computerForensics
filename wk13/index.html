@@ -56,11 +56,20 @@
         <b><i>Non-Government and civil litigation subpoenas</i></b>
         <b><i>Court order</i></b>
 <h2>13.03 Technical Challanges in Cloud Forensics</h2>
+    <b>Cloud Forensics Capability Maturity Model</b>
     <h3>13.03a Architecture</h3>
     <h3>13.03b Analysis of Cloud Forensic Data</h3>
+        - Metadata
+        - Logs to compare the modified, last access, and create (MAC) dates for files
     <h3>13.03c Anti-Forensics</h3>
+        <b>Anti-Forensics</b> - destroying ESI (Electronically Stored Information)
     <h3>13.03d Incident First Responders</h3>
     <h3>13.03e Role Management</h3>
+        <b>Data Owners</b>
+        <b>Identity Protection</b>
+        <b>Users</b>
+        <b>Access Controls</b>
+        <b>Personally Identifiable Information</b>
     <h3>13.03f Standards and Training</h3>
     
 <h2>13.04 Acquisitions in the Cloud</h2>
@@ -70,17 +79,55 @@
     <h3>13.05a Investigating CSPs</h3>
     <h3>13.05b Investigating Cloud Customers</h3>
     <h3>13.05c Understanding Prefetch Files</h3>
+        <b><i>.pf</i></b> - loads information into computer memory to speed an application loading
     <h3>13.05d Examining Stored Cloud Data on a PC</h3>
+        <b>Dropbox</b>
+        <b>Google Drive</b>
+        <b>One Drive</b>
     <h3>13.05e Windows Prefetch Artifacts</h3>
     
 <h2>13.06 Tools for Cloud Forensics</h2>
     <h3>13.06a Forensics Open-Stack Tools</h3>
+        <b>Management Plane</b>
+        <b>API (Application Programming Interfaces)</b>
     <h3>13.06b F-Response for the Cloud</h3>
     <h3>13.06c Magnet AXIOM Cloud</h3>
 
 <h2>13.07 Module Summary</h2>
     <h3>13.07a Module Summary</h3>
+    - Three service levels are available for the cloud: software as a service, platform as a service, and infrastructure as a service. These services can be deployed as public clouds, private clouds, community clouds, or hybrid clouds. NIST document SP 500-322, soon to be approved, lists more than 75 cloud services such as backup as a service, security as a service, and Drupal as a service.
+    - Cloud service providers use servers on distributive networks or mainframes that allow elasticity of resources for customers.
+    - With multinational clouds, you should seek legal counsel before proceeding with an investigation to make sure you aren’t violating another country’s privacy laws and to identify all jurisdictions where data is stored. Updates to the EU Data Protection Rules proposed for implementation in May 2018 will affect transfer of data outside the EU.
+    - Cloud investigations are necessary in cases involving cyberattacks, policy violations, data recovery, and fraud complaints. Cloud forensics is considered a subset of network forensics.
+    - Before initiating a cloud investigation, you should review the CSA to identify any restrictions that might limit collecting and analyzing data. You should also review the CSP’s policies and be aware of contract obligations between the CSP and cloud customers. Some CSPs have customers sharing resources that might cross international boundaries, which is a concern for digital forensics examiners.
+    - Law enforcement uses search warrants to acquire evidence in a criminal case. For criminal and civil cases, subpoenas and court orders are used to collect evidence. There are three types of subpoenas: government agency, non-government and civil litigation, and court orders.
+    - Five mechanisms are used to collect digital evidence under the U.S. Electronic Communications Privacy Act (ECPA): search warrants, subpoenas, subpoenas with prior notice to the subscriber or customer, court orders, and court orders with prior notice to the subscriber or customer. A search warrant can be used by law enforcement only when there’s evidence of probable cause that a crime was committed and evidence can be found at a specific location.
+    - Technical challenges in cloud forensics involve cloud architecture, data collection, analysis of cloud forensic data, anti-forensics, incident first responders, role management, legal issues, and standards and training.
+    - Customer data at CSPs might be commingled, which can make separating it difficult for investigations of a specific customer. Data might also be stored in geographic locations other than where the investigation is taking place, making it difficult to collect evidence and even resulting in conflicts in privacy laws.
+    - Anti-forensics is an effort to alter log records as well as date and time values of important system files and install malware to hide hackers’ activities.
+    - CSPs should have an incident response team ready to respond to network intrusions. In the absence of this team, it’s up to the digital forensics examiner to develop a plan for responding to the incident.
+    - Role management defines the duties of CSP staff and customers, such as who’s the data owner, who’s in charge of identity protection, who are the users, and who allows user account access to the CSP. A digital forensics examiner needs this information to determine where data is stored and the impact of its loss to the CSP and customers.
+    - The Cloud Security Alliance has developed resources that guide CSPs in privacy agreements and security measures. Security and digital forensics training for clouds are sponsored by organizations such as SANS, ISC2, the INFOSEC Institute, and the National Institute of Justice.
+    - Procedures for acquiring cloud evidence include examining network and firewall logs, performing disk acquisitions of a cloud system’s OS, and examining data storage devices. Data in clouds can be encrypted in two states: at rest and in motion.
+    - When investigating a cloud incident, apply a systematic approach to planning and processing the case. CSPs typically have incident response teams consisting of system administrators, network administrators, and legal advisors.
+    - The cloud services Dropbox, Google Drive, and Microsoft OneDrive contain data on a user’s computer or mobile device that can reveal what files were copied or accessed along with dates and times they were accessed.
+    - Prefetch files, which help speed applications’ startups, contain metadata on the last date and time an application was run and how many times it has run since being installed. Interpreting this metadata requires a hex editor or forensics tool.
+    - Vendors offer tools that can be combined for cloud forensics. Specific forensics tools for the cloud are FROST for OpenStack cloud IaaS platforms, F-Response’s cloud server utility, and Magnet AXIOM’s Cloud module.
     <h3>13.07b Key Terms</h3>
+    <b>cloud service agreements (CSAs)
+       cloud service providers (CSPs)
+       community cloud
+       deprovisioning
+       hybrid cloud
+       infrastructure as a service (IaaS)
+       management plane
+       multitenancy
+       platform as a service (PaaS)
+       private cloud
+       provisioning
+       public cloud
+       software as a service (SaaS)
+       spoliation</b>
     <h3>13.07c Review Questions</h3>
     <b>01) </b>
         <i></i>
